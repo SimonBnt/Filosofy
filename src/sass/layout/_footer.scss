@@ -1,0 +1,19 @@
+footer {
+    display: grid;
+    place-content: center;
+    background-color: #1f1f1f;
+    text-align: center;
+    border-top: solid #ffa149 2px;
+    
+    @include respondTo(md) {
+        // margin: 1rem auto;
+        // border: solid black 2px;
+        // border-radius: 0.5rem;
+        padding-bottom: 1rem;
+    }
+    
+    a {
+        color: #ffa149;
+        text-decoration: none;
+    }
+}

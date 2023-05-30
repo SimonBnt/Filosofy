@@ -1,0 +1,190 @@
+#quotePageMain {
+    display: grid;
+    grid-template-rows: 4fr 5fr 1fr;
+    place-items: center;
+    overflow: hidden;
+    background: linear-gradient(to left top, #7a7a7a 1% /*bottom-right color*/, #303030 /*middle color*/, #1d1d1d /*top-left color*/);
+    position: relative;
+
+    @include respondTo(md) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: none;
+    }
+    
+    #authorImg {
+        width: 100%;
+        border-bottom: #ffa149 solid 2px;    
+        max-width: 375px;    
+        max-height: 375px;
+        object-fit: cover;
+        
+        @include respondTo(sm) {
+            max-width: inherit;
+            max-height: 500px;
+        }
+        
+        @include respondTo(md) {
+            border-left: #ffa149 solid 2px;    
+            grid-column: 2/2;
+            border-bottom: inherit;
+            max-width: inherit;
+            max-height: inherit;
+        }
+    }
+
+    #blockquoteMainContainer {
+        grid-column: 1/2;
+        display: grid;
+        gap: 1.5rem 0;
+        margin: 1rem;
+        
+        @include respondTo(sm) {
+            margin: 4rem;
+        }
+
+        @include respondTo(md) {
+            display: inherit;
+            grid-column: inherit;
+            grid-row: 1/2;
+            margin: 8rem;
+            gap: 2rem 0;
+        }
+
+        #blockquoteContainer {
+            border-right: solid 4px #ff7b00;
+            border-bottom: solid 4px #ff7b00;
+            border-radius: 0.5rem;
+            padding: 0.75rem;
+            background: rgba($color: #000000, $alpha: 0.4);
+
+            .quote {
+                font-size: 1rem;
+                line-height: 1.5rem;
+
+                @include respondTo(md) {
+                    font-size: 2rem;
+                    line-height: 3rem;
+                }
+            }   
+        
+            .author {
+                font-size: 1.25rem;
+                display: flex;
+                flex-direction: column;
+                margin-left: 2rem;
+                color: #ffa149;
+
+                @include respondTo(md) {
+                    font-size: 2.25rem;
+                    line-height: 4rem;
+
+                }
+        
+                .book {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    text-decoration: underline;
+                    text-align: end;
+                    margin-right: 1rem;
+
+                    @include respondTo(md) {
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+        }
+        
+        #btnContainer {
+            display: grid;
+            place-items: center;
+            // grid-template-columns: 1fr 1fr;
+            // gap: 0 1rem;
+            // margin-top: 2rem;
+
+            @include respondTo(md) {
+            }
+
+            #newQuoteBtn, #redirectionBtn {
+                all: unset;
+                background-color: #ff7b00;
+                border-right: solid #1d1d1d 3px;
+                border-bottom: solid #1d1d1d 3px;
+                border-radius: 0.5rem;
+                padding: 0.25rem;
+                color: #1d1d1d;
+                font-weight: bolder;
+        
+                @include respondTo(sm) {
+                    font-size: 1.25rem;
+                }
+
+                @include respondTo(md) {
+                    cursor: pointer;
+                    padding: 0.5rem;
+                    font-size: 1.5rem;
+                }
+            }
+
+            #redirectionBtn {
+                display: flex;
+
+                img {
+                    width: 24px;
+                }
+            }
+        }
+    }
+
+    #autoGenerationContainer {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        display: flex;
+        place-items: center;
+        gap: 1rem;
+
+        @include respondTo(md) {
+            gap: 2rem;
+        }
+        
+        #quoteAutoGenerationBtn {
+            all: unset;
+            display: flex;
+            place-content: center;
+            border: solid #ff7b00 2px;
+            border-radius: 100%;
+    
+            @include respondTo(md) {
+                cursor: pointer;
+            }
+    
+            #randomIcon {
+                display: block;
+                width: 32px;
+    
+                @include respondTo(sm) {
+                    width: 48px;
+                }
+    
+                @include respondTo(md) {
+                    width: 64px;
+                }
+            }
+        }
+
+        #autoGenerationBtnLabel {
+            display: none;
+            font-size: 0.75rem;
+            border: solid #ff7b00 1px;
+            color: #ffa149;
+            padding: 0.25rem;
+            border-radius: 0.5rem;
+            background-color: #303030;
+
+            &:active {
+                transform: translateX(2px) translateX(2px);
+            }
+        }
+    }
+}

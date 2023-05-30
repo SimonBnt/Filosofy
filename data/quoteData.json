@@ -1,0 +1,30 @@
+[
+    {
+        "quote" : "Tout ce qui est contraire à la Nature est en effet contraire à la Raison ; et ce qui est contraire à la Raison est absurde et doit en conséquence être rejeté.",
+        "author" : "Baruch Spinoza",
+        "book" : "Traité théologico-politique",
+        "picture" : "/assets/img/author/spinoza.png",
+        "imgAlt" : "Portrait de Spinoza en noir et blanc" 
+    },
+    {
+        "quote" : "Ce n'est pas par la satisfaction du désir que s'obtient la liberté, mais par la destruction du désir.",
+        "author" : "Epictete",
+        "book" : "Le Manuel",
+        "picture" : "/assets/img/author/epictete.png", 
+        "imgAlt" : "Portrait de Epictete en noir et blanc" 
+    },
+    {
+        "quote" : "Connais toi, toi même.",
+        "author" : "Socrate",
+        "book" : "Le Banquet",
+        "picture" : "/assets/img/author/socrate.png",
+        "imgAlt" : "Portrait de Socrate en noir et blanc" 
+    },
+    {
+        "quote" : "Les sens sans la raison sont vides, mais la raison sans les sens est aveugle.",
+        "author" : "Emmanuel Kant",
+        "book" : "Traité théologico-politique",
+        "picture" : "/assets/img/author/kant.png",
+        "imgAlt" : "Portrait d'Emmanuel Kant en noir et blanc" 
+    }
+]

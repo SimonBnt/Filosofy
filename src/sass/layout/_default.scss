@@ -1,0 +1,23 @@
+html {
+    height: 100dvh;
+    font-family: $font1;
+    // background-color: #333;
+    // background-color: #272727;
+    overflow-x: hidden;
+
+}
+
+body {
+    overflow: hidden;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 8fr 1fr;
+    line-height: 1.5rem;
+    color: white;
+        
+        @include respondTo(md) {
+            a, button {
+                cursor: pointer;
+            }
+        }
+}

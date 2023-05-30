@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filosofy</title>
+
+    <link rel="stylesheet" href="/assets/css/styles.min.css">
+    
+    <!-- // ---- ScriptJs ---- // -->
+
+    <script src="/assets/js/burgerMenu.js" defer></script>
+    <script src="/assets/js/dynamicQuoteCardConstructor.js" defer></script>
+</head>
+<body>
+    <header class="default">
+        <div id="logoContainer">
+            <a href="/index.html">logo</a>
+        </div>
+        <div id="burgerMenuMainContainer">
+            <div id="burgerMenuOpenerContainer">
+                <div class="bgMenuBar" id="bgMenuBar1"></div>
+                <div class="bgMenuBar" id="bgMenuBar2"></div>
+                <div class="bgMenuBar" id="bgMenuBar3"></div>
+            </div>
+            <div id="burgerMenuContentContainer">
+                <div id="closeBurgerMenu" title="Cliquez pour fermer">x</div>
+                <!-- <form id="searchForm">
+                    <label id="searchLabel" for="searchInput">Faites une recherche par auteur ou par livre</label>
+                    <input id="searchInput" type="search" name="searchInput" aria-labelledby="searchInput" autocomplete="off" placeholder="Auteur, livre" required="" value="">   
+                    <button id="searchBtn" type="submit" title="Cliquez pour faire une recherche">
+                        <img id="glassIcon" src="/assets/img/svg/search.svg" alt="GO!">
+                    </button> 
+                </form> -->
+                <div id="contactIconsContainer">
+                    <a href="" class="externLink" rel="noopener noreferrer" target="_blank"><img class="externLinkIcons" title="Lien vers mon profil Facebook" src="/assets/img/svg/facebook.svg" alt="Icone de Facebook"></a>
+                    <a href="" class="externLink" title="Lien vers mon profil Linkedin" rel="noopener noreferrer" target="_blank"><img class="externLinkIcons" src="/assets/img/svg/linkedin.svg" alt="Ione de Linkedin" rel="noopener noreferrer" target="_blank"></a>
+                    <a href="" class="externLink" title="Lien vers mon profil Instagram" rel="noopener noreferrer" target="_blank"><img class="externLinkIcons" src="/assets/img/svg/instagram.svg" alt="Icone de Instagram"></a>
+                    <a href="" class="externLink" title="Lien vers mon profil Github" rel="noopener noreferrer" target="_blank"><img class="externLinkIcons" src="/assets/img/svg/github-black.svg" alt="Icone de github"></a>
+                    <a href="" class="externLink" title="Lien vers mon profil Codepen" rel="noopener noreferrer" target="_blank"><img class="externLinkIcons" src="/assets/img/svg/codepen-black.svg" alt="Icone de Codepen"></a>
+                    <a href="https://simonbenet.com/index.html" class="externLink"  title="Lien vers mon portefolio" rel="noopener noreferrer" target="_blank"><img class="externLinkIcons" src="/assets/img/svg/website.svg" alt="Icone de site web"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main id="quotePageMain">
+        <img id="authorImg">
+        <div id="autoGenerationContainer">
+            <button id="quoteAutoGenerationBtn" title="Cliquez pour activer la génération de citation aléatoire toutes les 10 secondes"><img src="/assets/img/svg/random.svg" id="randomIcon" alt="Icone 'aléatoire'"></button>
+            <span id="autoGenerationBtnLabel"></span>
+        </div>
+        <div id="blockquoteMainContainer">
+            <!-- <blockquote id="quote" cite="">"Connais toi, toi même."</blockquote>
+            <figcaption id="author">Socrate,
+                <cite id="book">Le Banquet</cite>
+            </figcaption> -->
+            <div id="blockquoteContainer">
+                <!-- <blockquote id="quote" cite="">"Ce n'est pas par la satisfaction du désir que s'obtient la liberté, mais par la destruction du désir."</blockquote>
+                <figcaption id="author">Epictète,
+                <cite id="book">Le Manuel</cite>
+                </figcaption> -->
+            </div>
+            <div id="btnContainer">
+                <button id="newQuoteBtn" title="Cliquez pour générer une nouvelle citation">Nouvelle citation !</button>
+                <!-- <a href="" rel="noopener noreferrer" target="_blank" id="redirectionBtn" title="Cliquez pour trouver le livre sur"><p>Trouver le livre</p><img src="/assets/img/svg/link.svg" alt="Icone de redirection externe"></a> -->
+            </div>
+        </div>
+    </main>
+    <footer class="default">
+        <p>Conçu et développé par <a href="https://simonbenet.com/index.html" title="Lien vers mon site officiel" rel="noopener noreferrer" target="_blank" ><strong>Simon Bénet</strong></a></p>
+        <a href="/legalMention.html"  rel="noopener noreferrer" target="_blank"  no title="Lien vers les mentions légales">Mentions légales</a>
+    </footer>
+</body>    
+</html>

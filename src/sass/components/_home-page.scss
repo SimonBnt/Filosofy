@@ -1,0 +1,112 @@
+#homeMain {
+    display: grid;
+    position: relative;
+    overflow: hidden;
+    place-content: center;
+    background: center / cover no-repeat url(/assets/img/home_bcg_img2.png);
+    
+    @include respondTo(md) {
+        grid-template-columns: 1fr 1fr;
+        background: inherit;
+        background: linear-gradient(to left top, #7a7a7a 1% /*bottom-right color*/, #303030 /*middle color*/, #1d1d1d /*top-left color*/);
+    }
+
+    #introductionContainer {
+        display: grid;
+        place-items: center;
+        margin: 0 1rem;      
+        line-height: 2rem;  
+        border-radius: 1rem;
+        font-size: 1.5rem;
+        background-color: rgba($color: black, $alpha: 0.65);
+        border: solid black 2px;
+        
+        @include respondTo(md) {
+            background-color: inherit;
+            border: inherit;
+        }
+
+        #title {
+            font-size: 2rem;
+            margin: 1rem 0;
+            
+            @include respondTo(md) {
+                margin: inherit;
+                font-size: 4rem;
+            }
+        }
+        
+        #introduction {
+            padding: 1rem;
+            
+            @include respondTo(md) {
+                padding: 4rem 2rem 4rem 4rem;
+            }
+    
+            strong {
+                font-size: larger;
+                color: #ff7b00;
+            }
+        }
+        
+        #homeCta {
+            all: unset;
+            text-align: end;
+            margin: 1rem auto;
+            border-right: solid #ff7b00 4px;
+            border-bottom: solid #ff7b00 4px;
+            color: white;
+            background-color: #1d1d1d;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            
+            @include respondTo(md) {
+                margin: 0rem auto 4rem auto;
+                background-color: white;
+                border-right: solid black 4px;
+                border-bottom: solid black 4px;
+                color: #1d1d1d;
+                cursor: pointer;
+            }
+        }
+    }
+
+    #homeBcgImg {
+        display: none;
+        
+        @include respondTo(md) {
+            display: block;
+            object-fit: cover;
+            position: absolute;
+            border-left: solid 2px #ffa149;
+            right: 0;
+            top: 0;
+            width: 50%;
+        }
+    }
+
+    #homeQuoteContainer {
+        display: none;
+
+        @include respondTo(md) {
+            display: block;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            margin-left: 1rem;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            font-size: 0.75rem;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            width: 25%;
+            line-height: 2rem;
+        }
+        
+        figcaption {
+            line-height: 1.5rem;
+            font-weight: bold;
+            margin-left: 2rem;
+        }
+    }
+}
