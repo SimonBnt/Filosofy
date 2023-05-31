@@ -11,8 +11,16 @@ header {
 
     #logoContainer {
         position: absolute;
-        top: 1rem;
-        left: 1rem;
+        display: flex;
+        place-items: center;
+        gap: 0 0.25rem;
+        top: 1.5rem;
+        left: 1.5rem;
+        
+        @include respondTo(sm) {
+            top: 2rem;
+            left: 2rem;
+        }
 
         @include respondTo(md) {
             position: inherit;
@@ -24,6 +32,27 @@ header {
             font-size: 3rem;
             color: white;
             text-decoration: none;
+        }
+
+        p {
+            font-family: 'Nickainley', sans-serif;
+            font-size: 2rem;
+            
+            @include respondTo(sm) {
+                font-size: 4rem;
+            }
+        }
+
+        img {
+            width: 24px;
+            
+            @include respondTo(sm) {
+                width: 38px;
+            }
+            
+            @include respondTo(md) {
+                width: 42px;
+            }
         }
     }
 
