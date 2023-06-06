@@ -10,14 +10,14 @@ header {
     }
 
     #logoContainer {
+        top: 1.5rem;
+        left: 1.5rem;
         position: absolute;
         display: flex;
         place-items: center;
         gap: 0 0.25rem;
-        top: 1.5rem;
-        left: 1.5rem;
         margin-bottom: 1rem;
-        
+
         @include respondTo(sm) {
             top: 2rem;
             left: 2rem;
@@ -40,6 +40,10 @@ header {
             font-size: 2rem;
             
             @include respondTo(sm) {
+                font-size: 3rem;
+            }
+            
+            @include respondTo(md) {
                 font-size: 4rem;
             }
         }
@@ -62,19 +66,34 @@ header {
 
        #burgerMenuOpenerContainer {
             position: absolute;
-            right: 0;
-            top: 0;
+            right: 1rem;
+            top: 1rem;
             
+            @include respondTo(mobile) {
+                right: 0rem;
+                top: 0rem;
+            }
+
+            @include respondTo(sm) {
+                right: 1rem;
+                top: 1rem;
+            }
+
             @include respondTo(md) {
                 display: none;
             }
             
             .bgMenuBar {
-                width: 64px;
+                margin: 0.5rem;
+                width: 48px;
                 height: 3px;
                 border-radius: 1rem;
                 background-color: white;
-                margin: 1rem;
+                
+                @include respondTo(mobile) {
+                    margin: 01rem;
+                    width: 64px;
+                }
             }
         }
 

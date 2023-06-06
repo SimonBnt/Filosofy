@@ -1,34 +1,34 @@
 #quotePageMain {
     display: grid;
-    grid-template-rows: 4fr 5fr 1fr;
+    grid-template-rows: 5fr 5fr;
     place-items: center;
+    place-content: center;
     overflow: hidden;
     background: linear-gradient(to left top, #7a7a7a 1% /*bottom-right color*/, #303030 /*middle color*/, #1d1d1d /*top-left color*/);
     position: relative;
 
-    @include respondTo(md) {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    @include respondTo(sm) {
         grid-template-rows: none;
+    }
+
+    @include respondTo(md) {
+        grid-template-columns: 1fr 1fr;
     }
     
     #authorImg {
         width: 100%;
         border-bottom: #ffa149 solid 2px;    
-        max-width: 375px;    
-        max-height: 375px;
         object-fit: cover;
+        height: 100%;
         
         @include respondTo(sm) {
             max-width: inherit;
-            max-height: 500px;
         }
         
         @include respondTo(md) {
             border-left: #ffa149 solid 2px;    
             grid-column: 2/2;
             border-bottom: inherit;
-            max-width: inherit;
             max-height: inherit;
         }
     }
@@ -78,11 +78,10 @@
                 @include respondTo(md) {
                     font-size: 2.25rem;
                     line-height: 4rem;
-
                 }
         
                 .book {
-                    font-size: 1.5rem;
+                    font-size: 4rem;
                     font-weight: bold;
                     text-decoration: underline;
                     text-align: end;
@@ -98,22 +97,17 @@
         #btnContainer {
             display: grid;
             place-items: center;
-            // grid-template-columns: 1fr 1fr;
-            // gap: 0 1rem;
-            // margin-top: 2rem;
-
-            @include respondTo(md) {
-            }
 
             #newQuoteBtn, #redirectionBtn {
+                font-size: 1rem;
                 all: unset;
                 background-color: #ff7b00;
                 border-right: solid #1d1d1d 3px;
                 border-bottom: solid #1d1d1d 3px;
                 border-radius: 0.5rem;
-                padding: 0.25rem;
                 color: #1d1d1d;
                 font-weight: bolder;
+                padding: 0.5rem;
         
                 @include respondTo(sm) {
                     font-size: 1.25rem;
@@ -121,7 +115,6 @@
 
                 @include respondTo(md) {
                     cursor: pointer;
-                    padding: 0.5rem;
                     font-size: 1.5rem;
                 }
             }
