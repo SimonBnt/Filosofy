@@ -27,7 +27,6 @@ body {
     }
     
     @include respondTo(md) {
-
         a, button {
             cursor: pointer;
         }

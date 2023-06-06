@@ -223,6 +223,10 @@ header {
                     padding: 0.25rem;
                     border-radius: 100%;
 
+                    @include respondTo(md) {
+                        width: 32px;
+                    }
+                    
                     .externLinkIcons {
                         width: 24px;
                         padding: 0;
