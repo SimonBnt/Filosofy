@@ -10,7 +10,7 @@ html {
 #quoteHtml {
     height: inherit;
     
-    @include respondTo(sm) {
+    @include respondTo(md) {
         height: 100dvh;
     }
 }
