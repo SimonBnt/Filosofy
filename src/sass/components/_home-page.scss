@@ -1,11 +1,11 @@
 #homeMain {
     display: grid;
     position: relative;
-    overflow: hidden;
     place-content: center;
     background: center / cover no-repeat url(/assets/img/home_bcg_img2.png);
     
     @include respondTo(md) {
+        overflow: hidden;
         grid-template-columns: 1fr 1fr;
         background: inherit;
         background: linear-gradient(to left top, #7a7a7a 1% /*bottom-right color*/, #303030 /*middle color*/, #1d1d1d /*top-left color*/);
@@ -82,6 +82,7 @@
             right: 0;
             top: 0;
             width: 50%;
+            height: 100%;
         }
     }
 

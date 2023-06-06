@@ -16,6 +16,7 @@ header {
         gap: 0 0.25rem;
         top: 1.5rem;
         left: 1.5rem;
+        margin-bottom: 1rem;
         
         @include respondTo(sm) {
             top: 2rem;
@@ -70,7 +71,8 @@ header {
             
             .bgMenuBar {
                 width: 64px;
-                height: 2px;
+                height: 3px;
+                border-radius: 1rem;
                 background-color: white;
                 margin: 1rem;
             }
