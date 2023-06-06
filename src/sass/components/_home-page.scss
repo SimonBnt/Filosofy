@@ -61,12 +61,16 @@
             border-radius: 0.5rem;
             
             @include respondTo(md) {
-                margin: 0rem auto 6rem auto;
+                margin: 0rem auto 8rem auto;
                 background-color: white;
                 border-right: solid black 4px;
                 border-bottom: solid black 4px;
                 color: #1d1d1d;
                 cursor: pointer;
+            }
+
+            @include respondTo(lg) {
+                margin: 0rem auto 4rem auto;
             }
         }
     }
