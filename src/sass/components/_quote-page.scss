@@ -21,11 +21,10 @@
         border-top: #ffa149 solid 2px;    
         object-fit: cover;
         height: 100%;
-        width: 100%;
         
         @include respondTo(md) {
-            width: 50dvw;
-            height: 80dvh;
+            // width: 50dvw;
+            // height: 80dvh;
             border-left: #ffa149 solid 2px;    
             border-top: none;    
             grid-column: 2/2;
