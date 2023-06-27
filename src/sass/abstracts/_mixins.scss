@@ -1,6 +1,12 @@
 @mixin respondTo($breakpoint) {
     @if ($breakpoint == mobile) {
-        @media (min-width: 360px) {
+        @media (min-width: 320px) {
+            @content;
+        }
+    }
+
+    @if ($breakpoint == tab) {
+        @media (min-width: 480px) {
             @content;
         }
     }
@@ -31,12 +37,6 @@
 
     @if ($breakpoint == desktop2) {
         @media (min-width: 1920px) {
-            @content;
-        }
-    }
-
-    @if ($breakpoint == tallDesktop) {
-        @media (min-height: 1920px) {
             @content;
         }
     }

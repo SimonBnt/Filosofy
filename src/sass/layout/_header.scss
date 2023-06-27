@@ -1,6 +1,6 @@
 header {
-    border-bottom: 2px solid #ffa149;
     background-color: #1d1d1d;
+    position: relative;
 
     @include respondTo(md) {
         display: grid;
@@ -10,21 +10,27 @@ header {
     }
 
     #logoContainer {
-        top: 1.5rem;
-        left: 1.5rem;
-        position: absolute;
+        // top: 1.5rem;
+        // left: 1.5rem;
+        // position: absolute;
         display: flex;
         place-items: center;
         gap: 0 0.25rem;
-        margin-bottom: 1rem;
-
+        padding-bottom: 2rem;
+        padding-top: 0.5rem;
+        
+        margin: 1rem 0 0 1rem;
+        
         @include respondTo(sm) {
-            top: 2rem;
-            left: 2rem;
+            padding-top: 1rem;
+            // top: 2rem;
+            // left: 2rem;
         }
-
+        
         @include respondTo(md) {
-            position: inherit;
+            padding-top: 1rem;
+            padding-bottom: 3rem;
+            // position: inherit;
             margin-left: 2rem;
             font-size: 4rem;
         }
@@ -61,188 +67,184 @@ header {
         }
     }
 
-    #burgerMenuMainContainer {
-       position: relative;
+    #burgerMenuOpenerContainer {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        
+        @include respondTo(mobile) {
+            right: 0rem;
+            top: 0rem;
+        }
 
-       #burgerMenuOpenerContainer {
-            position: absolute;
+        @include respondTo(sm) {
             right: 1rem;
             top: 1rem;
+        }
+
+        @include respondTo(md) {
+            display: none;
+        }
+        
+        .bgMenuBar {
+            margin: 0.5rem;
+            width: 48px;
+            height: 3px;
+            border-radius: 1rem;
+            background-color: white;
             
             @include respondTo(mobile) {
-                right: 0rem;
-                top: 0rem;
+                margin: 01rem;
+                width: 64px;
             }
+        }
+    }
 
-            @include respondTo(sm) {
-                right: 1rem;
-                top: 1rem;
-            }
+    #burgerMenuContentContainer {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: -600px;
+        width: fit-content;
+        overflow: hidden;
+        background-color: #1d1d1d;
+        border-left: solid #ffa149 2px;
+        border-bottom: solid #ffa149 2px;
+        z-index: 3000;
+        transition: 0.6s;
+        
+        @include respondTo(md) {
+            place-items: center;
+            grid-template-rows: inherit;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: inherit;
+            position: inherit;
+            top: inherit;
+            right: inherit;
+            border: inherit;
+            height: inherit;
+        }    
+
+        #closeBurgerMenu {
+            color: #ff7b00;
+            font-weight: bolder;
+            font-size: 2.5rem;
+            justify-self: end;
+            margin: 1rem 1rem 0 0;
 
             @include respondTo(md) {
                 display: none;
             }
-            
-            .bgMenuBar {
-                margin: 0.5rem;
-                width: 48px;
-                height: 3px;
-                border-radius: 1rem;
-                background-color: white;
-                
-                @include respondTo(mobile) {
-                    margin: 01rem;
-                    width: 64px;
-                }
-            }
         }
 
-        #burgerMenuContentContainer {
+        #searchForm {
             display: grid;
-            grid-template-rows: 1fr 1fr 1fr;
-            gap: 1rem;
-            position: absolute;
-            top: 0;
-            right: -600px;
-            width: fit-content;
-            overflow: hidden;
-            background-color: #1d1d1d;
-            border-left: solid #ffa149 2px;
-            border-bottom: solid #ffa149 2px;
-            z-index: 3000;
-            transition: 0.6s;
+            place-items: center;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            margin: 0 1rem;
+            font-size: 0.75rem;
             
             @include respondTo(md) {
-                place-items: center;
-                grid-template-rows: inherit;
-                grid-template-columns: 1fr 1fr 1fr;
-                gap: inherit;
-                position: inherit;
-                top: inherit;
-                right: inherit;
-                border: inherit;
-                height: inherit;
-            }    
-    
-            #closeBurgerMenu {
-                color: #ff7b00;
-                font-weight: bolder;
-                font-size: 2.5rem;
-                justify-self: end;
-                margin: 1rem 1rem 0 0;
-
-                @include respondTo(md) {
-                    display: none;
-                }
-            }
-
-            #searchForm {
-                display: grid;
-                place-items: center;
-                grid-template-columns: 1fr 1fr 1fr;
-                grid-template-rows: 1fr 1fr;
-                margin: 0 1rem;
-                font-size: 0.75rem;
-                
-                @include respondTo(md) {
-                    grid-column: 1/3;
-                    display: flex;
-                    gap: 0 1rem;
-                }
-                
-                #searchLabel {
-                    background-color: #272727;
-                    border: solid #ff7b00 1px;
-                    border-radius: 0.5rem;
-                    height: fit-content;
-                    grid-column: 1/4;
-                    padding: 0.5rem;
-
-                    @include respondTo(md) {
-                        font-size: 1rem;
-                    }
-                }
-                
-                #searchInput {
-                    background-color: white;
-                    border: solid #ff7b00 2px;
-                    border-radius: 0.5rem;
-                    color: black;
-                    width: fit-content;
-                    height: fit-content;
-                    padding: 0.5rem;
-                    grid-column: 1/3;
-                    margin: 0 auto;
-
-                    @include respondTo(md) {
-                        font-size: 1rem;
-                    }
-                }
-                
-                #searchBtn {
-                    display: flex;
-                    place-content: center;
-                    width: fit-content;
-                    height: fit-content;
-                    background-color: #ff7b00;
-                    border: none;
-                    border-bottom: solid 4px black;
-                    border-right: solid 4px black;
-                    border-radius: 0.5rem;
-                    color: #1d1d1d;
-                    padding: 0.25rem;
-                    grid-column: 3/3;
-                    
-                    #glassIcon {
-                        width: 24px;
-
-                        @include respondTo(md) {
-                            width: 32px;
-                        }
-                    }
-                }
-            }
-    
-            #contactIconsContainer {
+                grid-column: 1/3;
                 display: flex;
-                margin: 0 auto;
-                
-                @include respondTo(md) {
-                    grid-column: 3/3;
-                }
+                gap: 0 1rem;
+            }
+            
+            #searchLabel {
+                background-color: #272727;
+                border: solid #ff7b00 1px;
+                border-radius: 0.5rem;
+                height: fit-content;
+                grid-column: 1/4;
+                padding: 0.5rem;
 
-                .externLink {
-                    display: flex;
-                    place-content: center;
-                    margin: 1rem 0.5rem;
-                    background-color: #ff7b00;
-                    border-bottom: solid 2px black;
-                    border-right: solid 2px black;
-                    height: fit-content;
-                    width: fit-content;
-                    padding: 0.25rem;
-                    border-radius: 100%;
+                @include respondTo(md) {
+                    font-size: 1rem;
+                }
+            }
+            
+            #searchInput {
+                background-color: white;
+                border: solid #ff7b00 2px;
+                border-radius: 0.5rem;
+                color: black;
+                width: fit-content;
+                height: fit-content;
+                padding: 0.5rem;
+                grid-column: 1/3;
+                margin: 0 auto;
+
+                @include respondTo(md) {
+                    font-size: 1rem;
+                }
+            }
+            
+            #searchBtn {
+                display: flex;
+                place-content: center;
+                width: fit-content;
+                height: fit-content;
+                background-color: #ff7b00;
+                border: none;
+                border-bottom: solid 4px black;
+                border-right: solid 4px black;
+                border-radius: 0.5rem;
+                color: #1d1d1d;
+                padding: 0.25rem;
+                grid-column: 3/3;
+                
+                #glassIcon {
+                    width: 24px;
 
                     @include respondTo(md) {
                         width: 32px;
                     }
-                    
-                    .externLinkIcons {
-                        width: 24px;
-                        padding: 0;
-                        margin: 0;
+                }
+            }
+        }
 
-                        @include respondTo(md) {
-                            width: 32px;
-                        }
+        #contactIconsContainer {
+            display: flex;
+            margin: 0 auto;
+            
+            @include respondTo(md) {
+                grid-column: 3/3;
+            }
+
+            .externLink {
+                display: flex;
+                place-content: center;
+                margin: 1rem 0.5rem;
+                background-color: #ff7b00;
+                border-bottom: solid 2px black;
+                border-right: solid 2px black;
+                height: fit-content;
+                width: fit-content;
+                padding: 0.25rem;
+                border-radius: 100%;
+
+                @include respondTo(md) {
+                    width: 32px;
+                }
+                
+                .externLinkIcons {
+                    width: 24px;
+                    padding: 0;
+                    margin: 0;
+
+                    @include respondTo(md) {
+                        width: 32px;
                     }
                 }
             }
         }
-    
-        .hideBurgerMenu {
-            right: 0px !important;
-            transition: 0.6s;
-        }
+    }
+
+    .hideBurgerMenu {
+        right: 0px !important;
+        transition: 0.6s;
     }
 }

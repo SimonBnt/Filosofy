@@ -2,7 +2,7 @@ html {
     font-family: $font1;
     overflow-x: hidden;
     
-    @include respondTo(mobile) {
+    @include respondTo(md) {
         height: 100dvh;
     }
 

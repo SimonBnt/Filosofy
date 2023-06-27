@@ -4,6 +4,7 @@
     place-content: center;
     place-items: center;
     background: center / cover no-repeat url(/assets/img/home_bcg_img2.png);
+    border-top: #ffa149 solid 2px;    
     
     @include respondTo(md) {
         overflow: hidden;
@@ -35,10 +36,15 @@
         @include respondTo(md) {
             background-color: inherit;
             border: inherit;
+            border-top: none;
         }
         
         #titleContainer {
             display: flex;
+            
+            @include respondTo(md) {
+                padding-bottom: 4rem;
+            }
 
             #title {
                 font-size: 2rem;
@@ -73,7 +79,7 @@
             padding: 1rem;
             
             @include respondTo(md) {
-                padding: 4rem 2rem 4rem 4rem;
+                padding: 1rem 1rem 2rem 1rem;
             }
     
             strong {
