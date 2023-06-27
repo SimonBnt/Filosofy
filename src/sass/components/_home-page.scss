@@ -79,7 +79,7 @@
             padding: 1rem;
             
             @include respondTo(md) {
-                padding: 1rem 1rem 2rem 1rem;
+                padding: 1rem 2rem 2rem 2rem;
             }
     
             strong {
