@@ -6,9 +6,6 @@ footer {
     border-top: solid #ffa149 2px;
     
     @include respondTo(md) {
-        // margin: 1rem auto;
-        // border: solid black 2px;
-        // border-radius: 0.5rem;
         padding-bottom: 1rem;
     }
     

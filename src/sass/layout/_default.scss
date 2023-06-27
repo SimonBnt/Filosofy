@@ -32,7 +32,7 @@ body {
     color: white;
     
     @include respondTo(mobile) {
-        height: 100%;
+        min-height: 100dvh;
     }
     
     @include respondTo(md) {

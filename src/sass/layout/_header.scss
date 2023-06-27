@@ -10,9 +10,6 @@ header {
     }
 
     #logoContainer {
-        // top: 1.5rem;
-        // left: 1.5rem;
-        // position: absolute;
         display: flex;
         place-items: center;
         gap: 0 0.25rem;
@@ -23,14 +20,11 @@ header {
         
         @include respondTo(sm) {
             padding-top: 1rem;
-            // top: 2rem;
-            // left: 2rem;
         }
         
         @include respondTo(md) {
             padding-top: 1rem;
             padding-bottom: 3rem;
-            // position: inherit;
             margin-left: 2rem;
             font-size: 4rem;
         }
